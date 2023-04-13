@@ -1,0 +1,35 @@
+<div style="text-align: center;">
+  <h1>
+    <a href="https://dev.to/angular/angular-ngx-translate-typings-2d5c" target="_blank">
+      {{translations.HOME.HELLO| translate: param}}
+    </a>
+  </h1>
+</div>
+<h2>{{translations.HOME.LINKS.content| translate}}</h2>
+<ul>
+  <li>
+    <h2>
+      <a href="https://angular.io/tutorial" target="_blank" rel="noopener">
+        {{translations.HOME.LINKS.first| translate}}
+      </a>
+    </h2>
+  </li>
+  <li>
+    <h2>
+      <a href="https://angular.io/cli" target="_blank" rel="noopener">
+        {{translations.HOME.LINKS.second | translate}}
+      </a>
+    </h2>
+  </li>
+  <li>
+    <h2>
+      <a href="https://blog.angular.io" target="_blank" rel="noopener">
+        {{translations.HOME.LINKS.third| translate}}
+      </a>
+    </h2>
+  </li>
+</ul>
+
+<button (click)="changeLanguage('spa')">Español</button>
+<button (click)="changeLanguage('eng')">English</button>
+<button (click)="changeLanguage('pt')">Português</button>
