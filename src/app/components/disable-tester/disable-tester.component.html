@@ -1,0 +1,22 @@
+<!-- <input *ngxPermissionsOnly="'EDIT';
+authorisedStrategy: 'enable';
+unauthorisedStrategy: 'disable'"/> -->
+
+<!-- Remove se não for autorizado -->
+<!-- <input *ngxPermissionsOnly="'EDIT';
+authorisedStrategy: 'show';
+unauthorisedStrategy: 'remove'"/> -->
+
+<!-- Pro caso de definir as estratégias no app.component -->
+<!-- <input *ngxPermissionsOnly="'EDIT'"/>
+
+<button mat-raised-button color="accent" *ngxPermissionsOnly="'EDIT'">SUBSCRIBE</button> -->
+
+<!-- Usando ng-template -->
+
+<ng-template [ngxPermissionsOnly]="'EDIT'"
+(permissionsAuthorized)="isAuthorised"
+(permissionsUnauthorized)="!isAuthorised">
+  <input matInput [disabled]="!isAuthorised"/>
+  <button mat-raised-button color="accent" [disabled]="!isAuthorised">SUBSCRIBE</button>
+</ng-template>

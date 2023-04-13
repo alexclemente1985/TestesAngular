@@ -1,0 +1,16 @@
+<ng-template [ngxPermissionsOnly]="'HAPPY'"
+(permissionsAuthorized)="disableForm(false)"
+(permissionsUnauthorized)="disableForm(true)">
+
+</ng-template>
+<form [formGroup]="form" class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Favorite Cat</mat-label>
+    <input matInput formControlName="cat" placeholder="Ex. Pizza" value="Sushi">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Favorite Dog</mat-label>
+    <input matInput formControlName="dog" placeholder="Ex. HotDog" value="Sausache">
+  </mat-form-field>
+  <button *ngxPermissionsOnly="'EDIT'" mat-raised-button>Submit</button>
+</form>
